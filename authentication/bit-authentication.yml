@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source: https://bit.dev/reference/reference/using-bvm/
+docs: https://bit.dev/docs/
+note: >-
+  Bit has no captured OpenAPI, so this profile is hand-searched from the docs
+  rather than derived. Bit Cloud authentication is token-based: `bit login`
+  performs an interactive OAuth-style browser login and stores a Bit Cloud
+  auth token locally; the token authenticates CLI operations (export, import,
+  ripple CI) and the GraphQL API. For package installation from the Bit Cloud
+  npm registry, `bit npmrc generate` writes registry auth into `.npmrc`.
+summary:
+  types: [token, oauth-browser-login]
+  api_key_in: [config-file, npmrc]
+  oauth2_flows: []
+schemes:
+- name: BitCloudToken
+  type: token
+  mechanism: "bit login (browser-based auth) -> local Bit Cloud auth token"
+  applies_to: [CLI, GraphQL API]
+- name: RegistryToken
+  type: apiKey
+  in: file
+  file: .npmrc
+  mechanism: "bit npmrc generate"
+  applies_to: [Bit Cloud npm registry (node.bit.cloud)]
