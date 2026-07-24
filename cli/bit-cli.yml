@@ -1,0 +1,54 @@
+generated: '2026-07-18'
+method: searched
+source: https://bit.dev/reference/reference/using-bvm/
+binary: bit
+package: "@teambit/bvm"
+docs: https://bit.dev/docs/getting-started/installing-bit/installing-bit/
+description: >-
+  Bit's first-party command-line interface. Installed and version-managed via
+  BVM (Bit Version Manager). The CLI is the primary surface for creating,
+  versioning, testing, building, and exporting components to Bit Cloud or
+  self-hosted scopes; it also starts the built-in MCP server.
+install:
+- method: npm
+  command: npm i -g @teambit/bvm && bvm install
+- method: pnpm
+  command: pnpm add -g @teambit/bvm && bvm install
+- method: yarn
+  command: yarn global add @teambit/bvm && bvm install
+command_groups:
+- group: System & Utility
+  commands: [help, version, config, globals, system, doctor, clear-cache]
+- group: Information & Analysis
+  commands: [show, cat, graph, pattern, list, search, schema, diff, status]
+- group: Component Configuration
+  commands: [envs, scope, eject-conf, local-only, aspect]
+- group: Collaboration & Remote
+  commands: [remote, ripple, deprecate, undeprecate, import, delete, recover, export, lane, ci, fork, internalize]
+- group: Run & Serve
+  commands: [start, run, app]
+- group: Component Development
+  commands: [add, create, templates, watch, build, compile, move, remove, rename]
+- group: Workspace & Project Setup
+  commands: [new, init]
+- group: Testing & Quality
+  commands: [artifacts, test, check-types, lint, validate, format]
+- group: Dependencies & Packages
+  commands: [install, uninstall, update, link, eject, deps, why, set-peer, unset-peer, dependents]
+- group: Version Control
+  commands: [checkout, revert, tag, snap, reset, merge, stash, log, blame]
+- group: Authentication & Cloud
+  commands: [login, logout, whoami, npmrc]
+- group: AI / Agents
+  commands: [mcp-server]
+key_flows:
+- flow: Initialize a workspace with AI agents wired up
+  command: bit init --agent claude
+- flow: Start the MCP server for AI assistants
+  command: bit mcp-server start
+- flow: Configure an IDE for the MCP server
+  command: bit mcp-server setup vscode
+- flow: Authenticate with Bit Cloud
+  command: bit login
+- flow: Export components to a remote scope
+  command: bit export

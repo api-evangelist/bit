@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/teambit/bit/releases
+scheme: semver
+current_version: v2.0.11
+distribution: "@teambit/bvm (bvm install)"
+description: >-
+  Bit publishes dated, tagged releases on GitHub (teambit/bit). Versions are
+  bundled and installed via BVM; SemVer rules do not affect the bundled install.
+entries:
+- version: v2.0.11
+  date: '2026-07-08'
+  breaking: false
+  highlights:
+  - "`bit import --write-to-empty-dir` writes into an occupied target dir instead of failing"
+  - "`bit ci pr --keep-lane` config sync — env migrations on main propagate to the PR lane with versions"
+  - "Core environments (core-aspect-env, node-babel-mocha, node-typescript-mocha) updated to TypeScript 6"
+- version: v2.0.2
+  date: '2026-06-30'
+  breaking: false
+  highlights:
+  - "Follow-up fixes to the v2.0.0 agentic-workflow release"
+- version: v2.0.0
+  date: '2026-06-30'
+  breaking: true
+  highlights:
+  - "First-class agentic developer workflows: `bit init` auto-wires a hosted Bit Cloud MCP connection"
+  - "New `--agent [claude|cursor|copilot]` flag writes per-editor agent instruction files on init"
+  - "`bit ripple` exposes Ripple CI context directly to agents"
+  - "CLI output tuned for machine parsing"
+- version: v1.13.177
+  date: '2026-05-12'
+  breaking: false
+  highlights:
+  - "CLI output modernization around a shared formatting toolkit"
+  - "Semantic API diff with impact assessment for component changes (#10262)"
+  - "AI-agent-friendly output flags on `bit diff` and per-component rollup for `bit test`"
+  - "Component history page redesigned with a timeline layout (#10254)"

@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://bit.dev/reference/homepage/
+description: >-
+  Cross-cutting conventions for working with Bit. Bit is API-first: every
+  feature is built as an aspect with a programmatic API that also composes into
+  CLI commands, the web UI, and a GraphQL API. Bit v2 tunes CLI output for
+  machine parsing so AI agents can reliably consume component/workspace state.
+authentication:
+  style: token
+  detail: "`bit login` browser auth -> local Bit Cloud token; registry auth via `bit npmrc generate`."
+  see: authentication/bit-authentication.yml
+api_surface:
+  primary: CLI (bit) + GraphQL (api.v2.bit.cloud/graphql)
+  programmatic: aspect-based APIs (every aspect is a service consumable by others)
+  introspection: disabled in production
+distribution:
+  packages: standard npm packages (components exported to Bit Cloud or self-hosted scopes)
+  registry: Bit Cloud npm registry (node.bit.cloud)
+versioning:
+  scheme: semver
+  components: "SemVer tags via `bit tag`; development snaps via `bit snap`"
+  tool: "@teambit/bvm bundled versions"
+  see: lifecycle/bit-lifecycle.yml
+agent_semantics:
+  cli_output: "machine-parseable output tuned for AI agents (v2)"
+  mcp: "built-in MCP server (`bit mcp-server start`); see mcp/bit-mcp.yml"
+  skill: "provider-published Agent Skill; see skills/_index.yml"
+idempotency:
+  documented: false
+  note: >-
+    Bit publishes no idempotency-key contract for the hosted API; component
+    operations are made idempotent through immutable content-addressed snaps/tags
+    rather than request-level idempotency keys.

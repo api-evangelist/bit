@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://bit.dev/reference/homepage/
+description: >-
+  Cross-cutting standards Bit conforms to, asserted from the docs and observed
+  behavior. Bit is API-first: aspects expose programmatic APIs that compose into
+  a GraphQL API (introspection disabled in production). Bit ships a built-in
+  Model Context Protocol server. No published compliance-certification program
+  (SOC 2 / ISO 27001 / etc.) was found, so no Compliance pointer is emitted.
+standards:
+- id: graphql
+  conforms: true
+  evidence: "Live GraphQL endpoint at https://api.v2.bit.cloud/graphql (405/400 on non-POST/introspection)."
+- id: mcp
+  conforms: true
+  evidence: "Built-in MCP server via `bit mcp-server start`; hosted Bit Cloud MCP auto-wired by `bit init`."
+- id: semver
+  conforms: true
+  evidence: "Releases tagged v1.x/v2.x; components versioned with SemVer tags."
+- id: oauth2
+  conforms: false
+  evidence: "Bit Cloud uses browser-based login tokens; no documented OAuth2 authorization-server flows/scopes."
+- id: rfc9457-problem-details
+  conforms: false

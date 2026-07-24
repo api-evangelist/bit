@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.npmjs.com/org/teambit
+note: >-
+  Bit is distributed as first-party npm tooling. BVM (Bit Version Manager) is
+  the recommended installer; @teambit/bit is the core distribution. Individual
+  Bit aspects/components are also published under the @teambit scope. Components
+  authored WITH Bit are exported as standard npm packages under user scopes —
+  those are not first-party Bit libraries and are not listed here.
+packages:
+- language: javascript
+  registry: npm
+  name: "@teambit/bvm"
+  url: https://www.npmjs.com/package/@teambit/bvm
+  install: npm i -g @teambit/bvm
+  description: Bit Version Manager — installs and manages multiple versions of the Bit CLI.
+  version: 3.0.4
+  license: Apache-2.0
+  official: true
+- language: javascript
+  registry: npm
+  name: "@teambit/bit"
+  url: https://www.npmjs.com/package/@teambit/bit
+  install: bvm install
+  description: Core Bit distribution (the bundled Bit CLI / Harmony platform).
+  version: 2.0.28
+  official: true

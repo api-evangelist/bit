@@ -1,8 +1,15 @@
 aid: bit
 name: Bit
-description: 'Bit is a company surfaced as a portfolio company of insight-partners and added to the API
-  Evangelist network as a stub for enrichment. Sector: devops. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Bit (teambit) is the platform for the modular web — a build system and cloud
+  for component-driven development. Bit lets teams create, version, and share
+  reusable components as standard npm packages across projects and frameworks
+  (React, Vue, Angular, Node.js, Next.js and more), with independent build,
+  test, and CI/CD per component. Every Bit feature is API-first: an aspect-based
+  programmatic API plus a GraphQL API power the CLI, the web UI, and Bit Cloud.
+  Bit ships a built-in Model Context Protocol (MCP) server and a published
+  Claude Agent Skill so AI agents can intelligently create and reuse components
+  without duplication. Backed by Insight Partners.
 url: https://raw.githubusercontent.com/api-evangelist/bit/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +17,48 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/24789812?v=4
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Devops
-apis: []
+- Component Development
+- Frontend
+- Monorepo
+- npm
+- GraphQL
+- CLI
+- MCP
+- Developer Tools
+- AI Agents
+apis:
+- name: Bit Cloud GraphQL API
+  description: >-
+    Bit is API-first: every aspect exposes a programmatic API that also composes
+    into a GraphQL API used by the CLI, web UI, and Bit Cloud. The hosted
+    GraphQL endpoint is served from api.v2.bit.cloud/graphql (introspection is
+    disabled in production).
+  humanURL: https://bit.dev/reference/
+  baseURL: https://api.v2.bit.cloud/graphql
+  properties:
+  - type: Documentation
+    url: https://bit.dev/reference/
+  - type: GraphQL
+    url: https://api.v2.bit.cloud/graphql
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +66,57 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://bit.dev/
+  url: https://bit.cloud/
+- type: DeveloperPortal
+  url: https://bit.dev/docs/
+- type: Documentation
+  url: https://bit.dev/docs/
+- type: APIReference
+  url: https://bit.dev/reference/
+- type: GettingStarted
+  url: https://bit.dev/docs/getting-started/installing-bit/installing-bit/
+- type: Quickstart
+  url: https://bit.dev/docs/quick-start/
+- type: GitHubOrganization
+  url: https://github.com/teambit
+- type: Blog
+  url: https://bit.cloud/blog
+- type: Pricing
+  url: https://bit.cloud/pricing
+- type: Login
+  url: https://bit.cloud/login
+- type: TermsOfService
+  url: https://bit.cloud/terms
+- type: PrivacyPolicy
+  url: https://bit.cloud/privacy
+- type: StatusPage
+  url: https://status.bit.cloud
+- type: ChangeLog
+  url: https://github.com/teambit/bit/releases
+- type: ChangeLog
+  url: changelog/bit-changelog.yml
+- type: CLI
+  url: cli/bit-cli.yml
+- type: MCPServer
+  url: mcp/bit-mcp.yml
+- type: AgentSkill
+  url: skills/bit-cli.md
+- type: Packages
+  url: packages/bit-packages.yml
+- type: Authentication
+  url: authentication/bit-authentication.yml
+- type: Conventions
+  url: conventions/bit-conventions.yml
+- type: Conformance
+  url: conformance/bit-conformance.yml
+- type: Lifecycle
+  url: lifecycle/bit-lifecycle.yml
+- type: DomainSecurity
+  url: security/bit-domain-security.yml
+- type: LLMsTxt
+  url: llms/bit-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

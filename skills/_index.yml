@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/teambit/bit/tree/master/contrib/claude-skill-bit-cli
+note: >-
+  Provider-published Agent Skill, saved verbatim. Bit ships an official Claude
+  Code / AI-agent skill in the teambit/bit repo (contrib/claude-skill-bit-cli)
+  using progressive disclosure: SKILL.md is the command index, CLI_REFERENCE.md
+  the full subcommand/flag reference. Bit also generates these itself via
+  `bit cli generate --skill commands` and exposes a built-in MCP server.
+skills:
+- file: bit-cli.md
+  name: bit-cli
+  description: Bit CLI command reference for AI agents (must consult before running any bit command)
+  api: GraphQL / CLI (aspect-based programmatic API)
+  companion: bit-cli-reference.md
+  source: https://raw.githubusercontent.com/teambit/bit/master/contrib/claude-skill-bit-cli/SKILL.md

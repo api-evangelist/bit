@@ -1,0 +1,29 @@
+# Bit
+
+> Bit (teambit) is the platform for the modular web — a build system and cloud for component-driven development. Teams create, version, and share reusable components as standard npm packages across frameworks (React, Vue, Angular, Node.js, Next.js), with independent build, test, and CI/CD per component. Every Bit feature is API-first (aspect programmatic APIs composing into a GraphQL API), and Bit ships a built-in MCP server plus a published Claude Agent Skill for AI-agent workflows.
+
+## Docs
+- [Documentation](https://bit.dev/docs/)
+- [Reference Docs](https://bit.dev/reference/)
+- [Getting Started — Install Bit](https://bit.dev/docs/getting-started/installing-bit/installing-bit/)
+- [Quick Start](https://bit.dev/docs/quick-start/)
+- [Editor / AI-agent setup (MCP)](https://bit.dev/docs/getting-started/installing-bit/editor-setup/)
+- [Using BVM](https://bit.dev/reference/reference/using-bvm/)
+
+## APIs
+- [Bit Cloud GraphQL API](https://api.v2.bit.cloud/graphql): API-first endpoint powering the CLI, UI, and Bit Cloud (introspection disabled in production).
+
+## Tools
+- [Bit CLI command surface](cli/bit-cli.yml): install via `npm i -g @teambit/bvm && bvm install`.
+- [Built-in MCP server](mcp/bit-mcp.yml): `bit mcp-server start`; hosted Bit Cloud MCP auto-wired by `bit init`.
+- [Agent Skill (provider-published)](skills/bit-cli.md): official Claude Code skill from teambit/bit.
+
+## Packages
+- [@teambit/bvm](https://www.npmjs.com/package/@teambit/bvm): Bit Version Manager.
+- [@teambit/bit](https://www.npmjs.com/package/@teambit/bit): core Bit distribution.
+
+## Operations
+- [Changelog / Releases](https://github.com/teambit/bit/releases)
+- [Status](https://status.bit.cloud)
+- [GitHub Organization](https://github.com/teambit)
+- [Pricing](https://bit.cloud/pricing)
