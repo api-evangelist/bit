@@ -2,12 +2,10 @@ generated: '2026-07-18'
 method: searched
 status: published
 source: https://bit.dev/docs/getting-started/installing-bit/editor-setup/
-description: >-
-  Bit ships a built-in Model Context Protocol server as part of the Bit CLI,
-  enabling AI agents (Cursor, GitHub Copilot, Claude Code, Windsurf) to create
-  and reuse components, inspect component/workspace state, run builds, and query
-  Ripple CI. As of Bit v2, `bit init` auto-wires a hosted Bit Cloud MCP
-  connection plus per-editor instruction files with zero configuration.
+description: Bit ships a built-in Model Context Protocol server as part of the Bit CLI, enabling AI agents
+  (Cursor, GitHub Copilot, Claude Code, Windsurf) to create and reuse components, inspect component/workspace
+  state, run builds, and query Ripple CI. As of Bit v2, `bit init` auto-wires a hosted Bit Cloud MCP connection
+  plus per-editor instruction files with zero configuration.
 server:
   name: bit
   transport: stdio
@@ -15,20 +13,31 @@ server:
   hosted: Bit Cloud MCP (zero-config via `bit init`)
 setup:
   command: bit mcp-server setup [ide]
-  ides: [vscode, cursor, windsurf]
+  ides:
+  - vscode
+  - cursor
+  - windsurf
   rules_command: bit mcp-server rules [ide]
-  consumer_project_flag: "--consumer-project"
+  consumer_project_flag: --consumer-project
   auto_wire:
     command: bit init --agent [claude|cursor|copilot]
     writes:
     - editor: claude
-      files: [".mcp.json", ".claude/rules/bit.md"]
+      files:
+      - .mcp.json
+      - .claude/rules/bit.md
     - editor: cursor
-      files: [".cursor/mcp.json", ".cursor/rules/bit.mdc"]
+      files:
+      - .cursor/mcp.json
+      - .cursor/rules/bit.mdc
     - editor: copilot
-      files: [".github/instructions/bit.instructions.md"]
+      files:
+      - .github/instructions/bit.instructions.md
 docs: https://bit.cloud/teambit/mcp/cli-mcp-server
-note: >-
-  The MCP server surfaces Bit CLI capabilities (component create/reuse, status,
-  build, CI inspection) to agents; Bit does not publish a fixed tool manifest —
-  tools track the CLI command surface (see cli/bit-cli.yml).
+note: The MCP server surfaces Bit CLI capabilities (component create/reuse, status, build, CI inspection)
+  to agents; Bit does not publish a fixed tool manifest — tools track the CLI command surface (see cli/bit-cli.yml).
+deployment:
+  mode: local-stdio
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
