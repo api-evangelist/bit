@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bit is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: devops. This profile is a lead awaiting the enrichment pipeline.
+Bit (teambit) is the platform for the modular web — a build system and cloud for component-driven development. Bit lets teams create, version, and share reusable components as standard npm packages across projects and frameworks (React, Vue, Angular, Node.js, Next.js and more), with independent build, test, and CI/CD per component. Every Bit feature is API-first: an aspect-based programmatic API plus a GraphQL API power the CLI, the web UI, and Bit Cloud. Bit ships a built-in Model Context Protocol (MCP) server and a published Claude Agent Skill so AI agents can intelligently create and reuse components without duplication. Backed by Insight Partners.
 
-Backed by: insight-partners — https://bit.dev/
+**Areas:** Company · DevOps · Component Development · Frontend · Monorepo · npm · GraphQL · CLI · MCP · Developer Tools · AI Agents
+
+## Bit on APIs.io
+
+Everything profiled for Bit is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bit/](https://apis.io/providers/bit/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Bit Cloud GraphQL API](https://apis.io/apis/bit/bit-cloud-graphql-api/) — Bit is API-first: every aspect exposes a programmatic API that also composes into a GraphQL API used by the CLI, web UI, and Bit Cloud. The hosted GraphQL…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [bit](https://apis.io/servers/bit/bit/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bit Authentication](https://apis.io/security/bit/bit-authentication/)
+- [Bit Domain Security](https://apis.io/security/bit/bit-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://bit.cloud/)
+- [Documentation](https://bit.dev/docs/)
+- [Getting started](https://bit.dev/docs/getting-started/installing-bit/installing-bit/)
+- [API reference](https://bit.dev/reference/)
+- [Pricing](https://bit.cloud/pricing)
+- [Changelog](https://github.com/teambit/bit/releases)
+- [Blog](https://bit.cloud/blog)
+- [Terms of service](https://bit.cloud/terms)
+- [Privacy policy](https://bit.cloud/privacy)
+- [GitHub](https://github.com/teambit)
+- [Status](https://status.bit.cloud)
+
+## API Evangelist rating
+
+**Kin Score 28.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 66.7 |
+| Access clarity | 6.6 |
+
+**Agent readiness 9.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bit/](https://apis.io/providers/bit/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bit: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bit/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
